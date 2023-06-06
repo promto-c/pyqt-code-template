@@ -8,6 +8,8 @@ class MyWidget(QtWidgets.QWidget):
         some_arg (Any): An argument that will be used in the widget.
         some_value (int): A value used in the widget.
     '''
+    # Initialization and Setup
+    # ------------------------
     def __init__(self, parent=None, some_arg=None):
         ''' Initialize the widget and set up the UI, signal connections, and icon.
             Args:
@@ -54,10 +56,17 @@ class MyWidget(QtWidgets.QWidget):
         # Set the icon for the widget here
         pass
 
+    # Extended Methods
+    # ----------------
     def some_function(self):
         ''' Slot for a signal connection.
         '''
         pass
+
+    # Event Handling or Override Methods
+    # ----------------------------------
+    def keyPressEvent(self, event):
+        super(MyWidget, self).keyPressEvent(event)
 
 def main():
     ''' Create the application and main window, and show the widget.
