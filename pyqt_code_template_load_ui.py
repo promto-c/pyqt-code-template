@@ -58,7 +58,7 @@ class MyWidget(QtWidgets.QWidget):
 
     def _setup_ui(self):
         """Set up the UI for the widget, including creating widgets and layouts.
-        """        
+        """
         # Create widgets and layouts here
         pass
 
