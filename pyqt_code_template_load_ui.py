@@ -29,9 +29,7 @@ class MyWidget(QtWidgets.QWidget):
         self.some_arg = some_arg
 
         # Set up the initial values
-        self._setup_initial_values()
-        # Set up type hints for the widgets
-        self._setup_type_hints()
+        self._setup_attributes()
         # Set up the UI
         self._setup_ui()
         # Set up signal connections
@@ -39,7 +37,7 @@ class MyWidget(QtWidgets.QWidget):
         # Set up the icon
         self._setup_icon()
 
-    def _setup_initial_values(self):
+    def _setup_attributes(self):
         """Set up the initial values for the widget.
         """
         # Attributes
@@ -49,12 +47,6 @@ class MyWidget(QtWidgets.QWidget):
         # Private Attributes
         # ------------------
         self._some_private = 0
-
-    def _setup_type_hints(self):
-        """Set up type hints for the widgets in the .ui file.
-        """
-        # Set type hints for the widget here
-        pass
 
     def _setup_ui(self):
         """Set up the UI for the widget, including creating widgets and layouts.
