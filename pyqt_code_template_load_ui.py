@@ -1,8 +1,14 @@
+# Standard Library Imports
+# ------------------------
 import sys
+
+# Third Party Imports
+# -------------------
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 
+
 # Path to your UI file
-ui_file = "path/to/your/ui/file.ui"
+UI_PATH = "path/to/your/ui/file.ui"
 
 class MyWidget(QtWidgets.QWidget):
     """A PyQt5 widget with a user interface created from a .ui file.
@@ -24,7 +30,7 @@ class MyWidget(QtWidgets.QWidget):
         super().__init__(parent)
 
         # Load the .ui file using the uic module
-        uic.loadUi(ui_file, self)
+        uic.loadUi(UI_PATH, self)
 
         # Store the arguments
         self.some_arg = some_arg
@@ -89,18 +95,16 @@ class MyWidget(QtWidgets.QWidget):
         super().keyPressEvent(event)
 
 def main():
-    """Create the application and main window, and show the widget.
+    """Create the application, and show the widget.
     """
     # Create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QMainWindow()
 
-    # Create an instance of the widget and set it as the central widget
+    # Create an instance of the widget
     widget = MyWidget()
-    window.setCentralWidget(widget)
 
     # Show the window and run the application
-    window.show()
+    widget.show()
     sys.exit(app.exec_())
 
 if __name__ == '__main__':

@@ -1,5 +1,11 @@
+# Standard Library Imports
+# ------------------------
 import sys
+
+# Third Party Imports
+# -------------------
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class MyWidget(QtWidgets.QWidget):
     """A PyQt5 widget that performs some task.
@@ -85,18 +91,16 @@ class MyWidget(QtWidgets.QWidget):
         super().keyPressEvent(event)
 
 def main():
-    """Create the application and main window, and show the widget.
+    """Create the application, and show the widget.
     """
     # Create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QMainWindow()
 
-    # Create an instance of the widget and set it as the central widget
+    # Create an instance of the widget
     widget = MyWidget()
-    window.setCentralWidget(widget)
 
     # Show the window and run the application
-    window.show()
+    widget.show()
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
