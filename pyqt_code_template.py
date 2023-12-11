@@ -1,12 +1,21 @@
+# Type Checking Imports
+# ---------------------
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from typing import Any
+
 # Standard Library Imports
 # ------------------------
 import sys
 
 # Third Party Imports
 # -------------------
-from PyQt5 import QtCore, QtGui, QtWidgets
+from qtpy import QtCore, QtGui, QtWidgets
 
 
+# Class Definitions
+# -----------------
 class MyWidget(QtWidgets.QWidget):
     """A PyQt5 widget that performs some task.
 
@@ -16,7 +25,7 @@ class MyWidget(QtWidgets.QWidget):
     """
     # Initialization and Setup
     # ------------------------
-    def __init__(self, parent=None, some_arg=None):
+    def __init__(self, parent: QtWidgets.QWidget = None, some_arg: 'Any' = None):
         """Initialize the widget and set up the UI, signal connections, and icon.
 
         Args:
@@ -29,44 +38,34 @@ class MyWidget(QtWidgets.QWidget):
         # Store the arguments
         self.some_arg = some_arg
 
-        # Set up the initial attributes
-        self._setup_attributes()
-        # Set up the UI
-        self._setup_ui()
-        # Set up signal connections
-        self._setup_signal_connections()
-        # Set up the icons
-        self._setup_icons()
+        # Initialize setup
+        self.__setup_attributes()
+        self.__setup_ui()
+        self.__setup_signal_connections()
 
-    def _setup_attributes(self):
+    def __setup_attributes(self):
         """Set up the initial values for the widget.
         """
         # Attributes
-        # ------------------
+        # ----------
         self.some_value = 0
 
         # Private Attributes
         # ------------------
         self._some_private = 0
 
-    def _setup_ui(self):
-        """Set up the UI for the widget, including creating widgets and layouts.
+    def __setup_ui(self):
+        """Set up the UI for the widget, including creating widgets, layouts, and setting the icons for the widgets.
         """
-        # Create widgets and layouts here
+        # Create widgets and layouts
         pass
         # Set the layout for the widget
-        # self.setLayout(layout)
+        ...
 
-    def _setup_signal_connections(self):
+    def __setup_signal_connections(self):
         """Set up signal connections between widgets and slots.
         """
-        # Connect signals to slots here
-        pass
-
-    def _setup_icons(self):
-        """Set the icons for the widgets.
-        """
-        # Set the icons for the widgets here
+        # Connect signals to slots
         pass
 
     # Private Methods
@@ -74,10 +73,6 @@ class MyWidget(QtWidgets.QWidget):
 
     # Extended Methods
     # ----------------
-    def some_function(self):
-        """Slot for a signal connection.
-        """
-        pass
 
     # Special Methods
     # ---------------
@@ -90,9 +85,18 @@ class MyWidget(QtWidgets.QWidget):
         # Handle key press events here
         super().keyPressEvent(event)
 
+
+# Main Function
+# -------------
 def main():
     """Create the application, and show the widget.
     """
+    # Argument Parsing
+    # ----------------
+    ...
+
+    # Application Setup and Execution
+    # -------------------------------
     # Create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
 
