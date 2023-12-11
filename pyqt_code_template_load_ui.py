@@ -19,12 +19,12 @@ class MyWidget(QtWidgets.QWidget):
     """
     # Initialization and Setup
     # ------------------------
-    def __init__(self, parent=None, some_arg=None):
+    def __init__(self, parent: QtWidgets.QWidget = None, some_arg: Any = None):
         """Initialize the widget and set up the UI, signal connections, and icon.
 
         Args:
-            parent (QtWidgets.QWidget): The parent widget.
-            some_arg (Any): An argument that will be used in the widget.
+            parent: The parent widget.
+            some_arg: An argument that will be used in the widget.
         """
         # Initialize the super class
         super().__init__(parent)
@@ -35,14 +35,11 @@ class MyWidget(QtWidgets.QWidget):
         # Store the arguments
         self.some_arg = some_arg
 
-        # Set up the initial attributes
+        # Initialize setup
         self._setup_attributes()
-        # Set up the UI
         self._setup_ui()
-        # Set up signal connections
-        self._setup_signal_connections()
-        # Set up the icons
         self._setup_icons()
+        self._setup_signal_connections()
 
     def _setup_attributes(self):
         """Set up the initial values for the widget.
@@ -61,16 +58,16 @@ class MyWidget(QtWidgets.QWidget):
         # Create widgets and layouts here
         pass
 
-    def _setup_signal_connections(self):
-        """Set up signal connections between widgets and slots.
-        """
-        # Connect signals to slots here
-        pass
-
     def _setup_icons(self):
         """Set the icons for the widgets.
         """
         # Set the icons for the widgets here
+        pass
+
+    def _setup_signal_connections(self):
+        """Set up signal connections between widgets and slots.
+        """
+        # Connect signals to slots here
         pass
 
     # Private Methods
