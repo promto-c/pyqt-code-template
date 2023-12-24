@@ -29,14 +29,11 @@ class MyWidget(QtWidgets.QWidget):
         # Store the arguments
         self.some_arg = some_arg
 
-        # Set up the initial attributes
+        # Initialize setup
         self._setup_attributes()
-        # Set up the UI
         self._setup_ui()
-        # Set up signal connections
-        self._setup_signal_connections()
-        # Set up the icons
         self._setup_icons()
+        self._setup_signal_connections()
 
     def _setup_attributes(self):
         """Set up the initial values for the widget.
