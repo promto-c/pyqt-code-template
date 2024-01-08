@@ -58,7 +58,7 @@ class MyWidget(QtWidgets.QWidget):
         """Set up the UI for the widget, including creating widgets, layouts, and setting the icons for the widgets.
         """
         # Create widgets and layouts
-        pass
+        ...
         # Set the layout for the widget
         ...
 
@@ -66,10 +66,13 @@ class MyWidget(QtWidgets.QWidget):
         """Set up signal connections between widgets and slots.
         """
         # Connect signals to slots
-        pass
+        ...
 
     # Private Methods
     # ---------------
+
+    # Public Methods
+    # --------------
 
     # Extended Methods
     # ----------------

@@ -83,6 +83,9 @@ class MyWidget(QtWidgets.QWidget):
     # Private Methods
     # ---------------
 
+    # Public Methods
+    # --------------
+
     # Extended Methods
     # ----------------
 
