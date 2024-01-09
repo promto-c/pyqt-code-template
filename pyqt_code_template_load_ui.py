@@ -14,9 +14,12 @@ from pathlib import Path
 # -------------------
 from qtpy import QtCore, QtGui, QtWidgets, uic
 
+# Local Imports
+# -------------
 
-# Constants
-# ---------
+
+# Constant Definitions
+# --------------------
 PACKAGE_ROOT = Path(__file__).parent
 # UI file path
 RELATIVE_UI_PATH = "path/to/your/ui/file.ui"
