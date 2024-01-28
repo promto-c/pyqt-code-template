@@ -29,29 +29,27 @@ UI_PATH = PACKAGE_ROOT / RELATIVE_UI_PATH
 # Class Definitions
 # -----------------
 class MyWidget(QtWidgets.QWidget):
-    """A PyQt5 widget with a user interface created from a .ui file.
+    """A Qt widget with a user interface created from a .ui file.
 
     Attributes:
-        some_arg (Any): An argument that will be used in the widget.
-        some_value (int): A value that will be used in the widget.
+        ...
     """
     # Initialization and Setup
     # ------------------------
-    def __init__(self, parent: QtWidgets.QWidget = None, some_arg: 'Any' = None):
+    def __init__(self, parent: QtWidgets.QWidget = None):
         """Initialize the widget and set up the UI, signal connections, and icon.
 
         Args:
-            parent: The parent widget.
-            some_arg: An argument that will be used in the widget.
+            ...
         """
         # Initialize the super class
         super().__init__(parent)
 
         # Load the .ui file using the uic module
-        uic.loadUi(str(UI_PATH), self)
+        uic.loadUi(UI_PATH.as_posix(), self)
 
         # Store the arguments
-        self.some_arg = some_arg
+        ...
 
         # Initialize setup
         self.__setup_attributes()
@@ -63,18 +61,25 @@ class MyWidget(QtWidgets.QWidget):
         """
         # Attributes
         # ----------
-        self.some_value = 0
+        ...
 
         # Private Attributes
         # ------------------
-        self._some_private = 0
+        ...
 
     def __setup_ui(self):
         """Set up the UI for the widget, including creating widgets, layouts, and setting the icons for the widgets.
         """
-        # Create widgets and layouts
+        # Create Layouts
+        # --------------
         ...
-        # Set the layout for the widget
+
+        # Create Widgets
+        # --------------
+        ...
+
+        # Add Widgets to Layouts
+        # ----------------------
         ...
 
     def __setup_signal_connections(self):
@@ -83,25 +88,20 @@ class MyWidget(QtWidgets.QWidget):
         # Connect signals to slots
         ...
 
-    # Private Methods
-    # ---------------
-
     # Public Methods
     # --------------
 
-    # Extended Methods
-    # ----------------
+    # Utility Methods
+    # ---------------
+
+    # Private Methods
+    # ---------------
 
     # Special Methods
     # ---------------
 
-    # Event Handling or Override Methods
-    # ----------------------------------
-    def keyPressEvent(self, event: QtGui.QKeyEvent):
-        """Handle key press events.
-        """
-        # Handle key press events here
-        super().keyPressEvent(event)
+    # Overridden Methods
+    # --------------------
 
 
 # Main Function
@@ -118,11 +118,11 @@ def main():
     # Create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
 
-    # Create an instance of the widget
+    # Create and show the widget
     widget = MyWidget()
-
-    # Show the window and run the application
     widget.show()
+
+    # Run the application
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
