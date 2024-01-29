@@ -79,6 +79,9 @@ class MyWidget(QtWidgets.QWidget):
     # Public Methods
     # --------------
 
+    # Class Properties
+    # ----------------
+
     # Utility Methods
     # ---------------
 
@@ -89,7 +92,7 @@ class MyWidget(QtWidgets.QWidget):
     # ---------------
 
     # Overridden Methods
-    # --------------------
+    # ------------------
 
 
 # Main Function
