@@ -7,7 +7,6 @@ if TYPE_CHECKING:
 
 # Standard Library Imports
 # ------------------------
-import sys
 
 # Third Party Imports
 # -------------------
@@ -100,6 +99,8 @@ class MyWidget(QtWidgets.QWidget):
 def main():
     """Create the application, and show the widget.
     """
+    import sys
+
     # Argument Parsing
     # ----------------
     ...
