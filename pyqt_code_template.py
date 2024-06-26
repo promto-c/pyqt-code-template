@@ -44,7 +44,7 @@ class MyWidget(QtWidgets.QWidget):
         self.__init_signal_connections()
 
     def __init_attributes(self):
-        """Set up the initial values for the widget.
+        """Initialize the attributes.
         """
         # Attributes
         # ----------
@@ -55,7 +55,7 @@ class MyWidget(QtWidgets.QWidget):
         ...
 
     def __init_ui(self):
-        """Set up the UI for the widget, including creating widgets, layouts, and setting the icons for the widgets.
+        """Initialize the UI of the widget.
         """
         # Create Layouts
         # --------------
@@ -70,7 +70,7 @@ class MyWidget(QtWidgets.QWidget):
         ...
 
     def __init_signal_connections(self):
-        """Set up signal connections between widgets and slots.
+        """Initialize signal-slot connections.
         """
         # Connect signals to slots
         ...
