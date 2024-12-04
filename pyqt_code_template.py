@@ -16,6 +16,10 @@ from qtpy import QtCore, QtGui, QtWidgets
 # -------------
 
 
+# Constant Definitions
+# --------------------
+
+
 # Class Definitions
 # -----------------
 class MyWidget(QtWidgets.QWidget):
