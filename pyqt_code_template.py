@@ -28,6 +28,7 @@ class MyWidget(QtWidgets.QWidget):
     Attributes:
         ...
     """
+
     # Initialization and Setup
     # ------------------------
     def __init__(self, parent: QtWidgets.QWidget = None):
@@ -61,10 +62,6 @@ class MyWidget(QtWidgets.QWidget):
     def __init_ui(self):
         """Initialize the UI of the widget.
         """
-        # Create Layouts
-        # --------------
-        ...
-
         # Create Widgets
         # --------------
         ...
