@@ -1,7 +1,6 @@
 # Type Checking Imports
 # ---------------------
 from typing import TYPE_CHECKING
-
 if TYPE_CHECKING:
     from typing import Any
 
@@ -23,7 +22,7 @@ from qtpy import QtCore, QtGui, QtWidgets
 # Class Definitions
 # -----------------
 class MyWidget(QtWidgets.QWidget):
-    """A Qt widget that performs some task.
+    """Template QWidget with stubbed setup hooks.
 
     Attributes:
         ...
@@ -32,12 +31,11 @@ class MyWidget(QtWidgets.QWidget):
     # Initialization and Setup
     # ------------------------
     def __init__(self, parent: QtWidgets.QWidget = None):
-        """Initialize the widget and set up the UI, signal connections, and icons.
+        """Set up the widget, build the UI, and connect signals.
 
         Args:
-            ...
+            parent: Optional parent widget.
         """
-        # Initialize the super class
         super().__init__(parent)
 
         # Store the arguments
@@ -49,19 +47,17 @@ class MyWidget(QtWidgets.QWidget):
         self.__init_signal_connections()
 
     def __init_attributes(self):
-        """Initialize the attributes.
+        """Initialize attributes.
         """
-        # Attributes
-        # ----------
-        ...
-
-        # Private Attributes
-        # ------------------
         ...
 
     def __init_ui(self):
-        """Initialize the UI of the widget.
+        """Initialize the UI.
         """
+        # Initial UI State
+        # ----------------
+        ...
+
         # Create Widgets
         # --------------
         ...
@@ -73,7 +69,6 @@ class MyWidget(QtWidgets.QWidget):
     def __init_signal_connections(self):
         """Initialize signal-slot connections.
         """
-        # Connect signals to slots
         ...
 
     # Public Methods
@@ -108,14 +103,11 @@ def main():
 
     # Application Setup and Execution
     # -------------------------------
-    # Create the application and the main window
     app = QtWidgets.QApplication(sys.argv)
 
-    # Create and show the widget
     widget = MyWidget()
     widget.show()
 
-    # Run the application
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
